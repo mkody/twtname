@@ -72,7 +72,7 @@ No. I need to make the commands working to be saved in the conf file.
 I don't know, I'm just using it.
 
 
-### Can we see you're schedule?
+### Can we see your schedule?
 Sure!
 ```
 1, 8:10, 11:40, Kody|School
