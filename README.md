@@ -61,7 +61,7 @@ The fist line is to disable or enable the script.
 
 The second line is to "Lock" your display name.
 - `Lock: 0` or `Lock: `: will continue the script and use the scheduled names
-- `Lock: <VALUE>` will use the <VALUE> every time and send it to Twitter. Can be cool if you are especially busy, for example, and you don't use your schedule now.
+- `Lock: <VALUE>` will use the `<VALUE>` every time and send it to Twitter. Can be cool if you are especially busy, for example, and you don't use your schedule now.
 
 
 ### Is it finished?
