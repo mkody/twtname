@@ -1,5 +1,5 @@
 # twtname
-## Change your Twitter Display Name in given hours and day of weeks
+## Change your Twitter Display Name in given hours and days of week
 
 
 ### What is this?
