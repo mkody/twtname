@@ -65,12 +65,30 @@ The second line is to "Lock" your display name.
 
 
 ### Is it finished?
-No. I need to make the commands working to be saved in the conf file!
+No. I need to make the commands working to be saved in the conf file.
 
 
 ### Why Codebird-PHP?
-I don't know, I'm just using it!
+I don't know, I'm just using it.
 
+
+### Can we see you're schedule?
+Sure!
+```
+1, 8:10, 11:40, Kody|School
+1, 12:40, 16:50, Kody|School
+2, 8:10, 12:30, Kody|School
+2, 13:30, 16:50, Kody|School
+3, 07:40, 12:00, Kody|Work
+3, 13:30, 17:30, Kody|Work
+4, 07:40, 12:00, Kody|Work
+4, 13:30, 17:30, Kody|Work
+5, 07:40, 12:00, Kody|Work
+5, 13:30, 17:30, Kody|Work
+5, 21:00, 22:30, Kody|RB
+```
+
+---
 
 ## Thanks to:
 - [HAL9000 and people on Stackoverflow for the little help](http://stackoverflow.com/a/25565783/2900156)
