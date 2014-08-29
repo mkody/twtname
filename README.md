@@ -32,10 +32,10 @@ You will need to have...
 ````
 Day of the week (N), Start time, End time, Display Name
 ````
-    1. **Day of the week (N)**: This need to be a number between 1 and 7. 1 is for Monday, 7 is for Sunday.
-    2. **Start time**: In 24hour format, the time when the display name (at then end of the line) should start displaying.
-    3. **End time**: In 24hour format, now when it will stop displaying
-    4. **Display Name**: The name to display with this configuration
+1. **Day of the week (N)**: This need to be a number between 1 and 7. 1 is for Monday, 7 is for Sunday.
+2. **Start time**: In 24hour format, the time when the display name (at then end of the line) should start displaying.
+3. **End time**: In 24hour format, now when it will stop displaying
+4. **Display Name**: The name to display with this configuration
 
 > **NOTE:** The time and day of the week you enter is based on the time from the server! Check his timezone. 
 > Also, you need to make a new line every time you need to add an another entry AND put a coma between "columns" **with a space after it**!
