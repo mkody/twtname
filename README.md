@@ -28,7 +28,7 @@ You will need to have...
 
 ### How do I get this working now?
 - Open the file `twtname.conf` and replace every "<...>" with the values you need.
-- Below, you will see some some lines like `1, 8:10, 11:40, Monday mornings`. Here's how this works:
+- Below, you will see some some lines like `1, 16:00, 18:30, Friday!`. Here's how this works:
 ````
 Day of the week (N), Start time, End time, Display Name
 ````
