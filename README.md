@@ -21,7 +21,7 @@ You will need to have...
 - Git clone this repo with the submodules and go to his folder: 
     + `git clone --recursive https://github.com/mkody/twtname.git && cd twtname`
 - Copy `twtname.exemple.conf` to `twtname.conf`
-- Now, put a crontab job on this script! For exemple with my server, here's my cron to make it work every 10 minutes: `*/10 * * * * /usr/bin/env php /home/mkody/twtname.php > /dev/null 2>&1`
+- Now, put a crontab job on this script! For exemple with my server, here's my cron to make it work every 10 minutes: `*/10 * * * * cd /home/mkody/twtname && /usr/bin/env php twtname.php > /dev/null 2>&1`
     + Note that with the ` > /dev/null 2>&1` at the end, you'll not keep logs or emails (Except if you want to test or be flooded every 10 minutes).
 - And I think that's it! Now, let's configure it...
 
