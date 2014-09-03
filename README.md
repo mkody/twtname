@@ -28,10 +28,15 @@ You will need to have...
 
 ### How do I get this working now?
 - Open the file `twtname.conf` and replace every "<...>" with the values you need.
-- Below, you will see some some lines like `1, 16:00, 18:30, Friday!`. Here's how this works:
+- Below, you will see some some lines like 
+
 ````
-Day of the week (N), Start time, End time, Display Name
+1, 07:40, 10:10, I hate mondays
+5, 16:00, 18:30, Friday!
 ````
+
+For: Day of the week (N), Start time, End time, Display Name
+
 1. **Day of the week (N)**: This need to be a number between 1 and 7. 1 is for Monday, 7 is for Sunday.
 2. **Start time**: In 24hour format, the time when the display name (at then end of the line) should start displaying.
 3. **End time**: In 24hour format, now when it will stop displaying
@@ -75,9 +80,9 @@ I don't know, I'm just using it.
 ### Can we see your schedule?
 Sure!
 ```
-1, 8:10, 11:40, Kody|School
+1, 08:10, 11:40, Kody|School
 1, 12:40, 16:50, Kody|School
-2, 8:10, 12:30, Kody|School
+2, 08:10, 12:30, Kody|School
 2, 13:30, 16:50, Kody|School
 3, 07:40, 12:00, Kody|Work
 3, 13:30, 17:30, Kody|Work
