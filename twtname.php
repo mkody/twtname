@@ -1,7 +1,7 @@
 <?php
 
 // Save theses values
-$currentDay = date("N");    
+$currentDay = date("N");
 $currentHour = date("H:i");
 
 // Our file
@@ -20,15 +20,21 @@ if(!empty($_GET['s'])) { // `http://url?s=Value` can change the name and lock to
     if($get == 'reset') {
         $name = $config['2'];
         // Set "lock" to `0`
+        $fileC['1'] = 'Lock: 0';
     } elseif($get == 'disable') {
         // Set "Disable" to `1`
+        $fileC['0'] = '1';
     } elseif($get == 'enable') {
-        $config['0'] = '0';
+        $fileC['0'] = 'Disable: 0';
         // Set "Disable" to `0`
+        $fileC['0'] = 'Disable: 0';
     } else {
         $name = $get;
         // Set "lock" with $get value
+        $fileC['1'] = 'Lock: '. $get;
     }
+    $new_content = implode("\n", $fileC);
+    file_put_contents($file, $new_content);
 } elseif($config['1'] != '0') { // `Lock: Value` (put it at 0 to disable the lock)
     $name = $config['1'];
 } else {
@@ -52,7 +58,7 @@ echo 'currentDay: "'. $currentDay .'"';
 echo '<br> currentHour: "'. $currentHour .'"';
 echo '<br> name: "'. $name .'"';
 
-require_once('./codebird-php/src/codebird.php'); // You will need [codebird.php](https://github.com/jublonet/codebird-php/tree/develop/src)
+/*require_once('./codebird-php/src/codebird.php'); // You will need [codebird.php](https://github.com/jublonet/codebird-php/tree/develop/src)
 \Codebird\Codebird::setConsumerKey($config['3'], $config['4']);
 $cb = \Codebird\Codebird::getInstance();
 $cb->setToken($config['5'], $config['6']);
@@ -66,4 +72,4 @@ try {
     echo('<br> **Error**: "' . $e->getMessage() . '"<br> **Data sent**: ');
     print_r($params);
     die('<br> --- Stopping. ---');
-}
+}*/
