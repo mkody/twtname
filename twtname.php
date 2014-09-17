@@ -1,15 +1,15 @@
 <?php
 
 // Save theses values
-$currentDay = date("N");    
+$currentDay = date("N");
 $currentHour = date("H:i");
 
 // Our file
 $file = './twtname.conf'; // Read the README for how to use it!
 $fileC = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES); // Read the file and put each lines in an array
 
-$config = array_slice($fileC, 0, 7);
-$lines = array_slice($fileC, 7, 999);
+$config = array_slice($fileC, 0, 8);
+$lines = array_slice($fileC, 8, 999);
 
 foreach($config as &$value){
     $value = substr($value, strpos($value, ':') + 2);
@@ -48,14 +48,14 @@ if($config['0'] == '1') { // If you set up `Disable: 1` in the config file, then
     die('This script is disabled. Enable it again in the '. $file .' file.');
 }
 
-echo 'currentDay: "'. $currentDay .'"';
-echo '<br> currentHour: "'. $currentHour .'"';
-echo '<br> name: "'. $name .'"';
+$message = "[currentDay] '". $currentDay ."', ";
+$message .= "[currentHour] '". $currentHour ."', ";
+$message .= "[name] '". $name ."'";
 
 require_once('./codebird-php/src/codebird.php'); // You will need [codebird.php](https://github.com/jublonet/codebird-php/tree/develop/src)
-\Codebird\Codebird::setConsumerKey($config['3'], $config['4']);
+\Codebird\Codebird::setConsumerKey($config['4'], $config['5']);
 $cb = \Codebird\Codebird::getInstance();
-$cb->setToken($config['5'], $config['6']);
+//$cb->setToken($config['6'], $config['7']);
 $params = array(
   'name' => $name
 );
@@ -63,7 +63,10 @@ $params = array(
 try {
     $update = $cb->account_updateProfile($params);
 } catch (Exception $e) {
-    echo('<br> **Error**: "' . $e->getMessage() . '"<br> **Data sent**: ');
-    print_r($params);
-    die('<br> --- Stopping. ---');
+    $message .= "\r\n**Error**: '" . $e->getMessage() ."'";
+    $message .= "\r\n--- Stopping. ---";
+    mail($config['3'], 'Error with twtname', $message);
 }
+
+echo $message;
+
