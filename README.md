@@ -78,6 +78,7 @@ Sure! (except my keys, hehe)
 Disable: 0
 Lock: 0
 Default: Kody
+Email: im@kdy.ch
 ConsumerKey: [HIDDEN]
 ConsumerSecret: [HIDDEN]
 TokenKey: [HIDDEN]
