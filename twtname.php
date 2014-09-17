@@ -20,15 +20,21 @@ if(!empty($_GET['s'])) { // `http://url?s=Value` can change the name and lock to
     if($get == 'reset') {
         $name = $config['2'];
         // Set "lock" to `0`
+        $fileC['1'] = 'Lock: 0';
     } elseif($get == 'disable') {
         // Set "Disable" to `1`
+        $fileC['0'] = '1';
     } elseif($get == 'enable') {
-        $config['0'] = '0';
+        $fileC['0'] = 'Disable: 0';
         // Set "Disable" to `0`
+        $fileC['0'] = 'Disable: 0';
     } else {
         $name = $get;
         // Set "lock" with $get value
+        $fileC['1'] = 'Lock: '. $get;
     }
+    $new_content = implode("\n", $fileC);
+    file_put_contents($file, $new_content);
 } elseif($config['1'] != '0') { // `Lock: Value` (put it at 0 to disable the lock)
     $name = $config['1'];
 } else {
@@ -69,4 +75,3 @@ try {
 }
 
 echo $message;
-
