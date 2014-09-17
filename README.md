@@ -47,16 +47,11 @@ For: Day of the week (N), Start time, End time, Display Name
 
 - If you want, you can also access this script from your browser to control it! But please, PLEASE, add a password to access it before with an .htaccess or something. You can move everything (yes everything, the ".files" too) on a web accessible folder with a server that supports PHP. 
 
-- You can send "commands" to it! Just use the URL to the file and add `?s=` then your command.
-
-> **NOTE: This is not working at the moment!**
-
-````
-- `reset` will unlock the `Lock` option in the config file
-- `disable` will disable the script
-- `enable` enable the script again
-- And if you give any other value, the value becomes your display name and it'll be **Locked** (until you send `reset` again)
-````
+- You can send "commands" to it! Just use the URL to the file and add `?s=` then your command:
+    - `reset` will unlock the `Lock` option in the config file
+    - `disable` will disable the script
+    - `enable` enable the script again
+    - And if you give any other value, the value becomes your display name and it'll be **Locked** (until you send `reset` again)
 
 
 ### What are those two first lines in the twtname.conf?
@@ -77,18 +72,34 @@ No. I need to make the commands working to be saved in the conf file.
 I don't know, I'm just using it.
 
 
-### Can we see your schedule?
-Sure!
+### Can we see your config file?
+Sure! (except my keys, hehe)
 ```
+Disable: 0
+Lock: 0
+Default: Kody
+ConsumerKey: [HIDDEN]
+ConsumerSecret: [HIDDEN]
+TokenKey: [HIDDEN]
+TokenSecret: [HIDDEN]
+
 1, 08:10, 11:40, Kody|School
+1, 09:45, 10:05, Kody|Pause
 1, 12:40, 16:50, Kody|School
+1, 15:05, 15:20, Kody|Pause
+
 2, 08:10, 12:30, Kody|School
+2, 09:45, 10:05, Kody|Pause
 2, 13:30, 16:50, Kody|School
-3, 07:40, 12:00, Kody|Work
+2, 15:05, 15:20, Kody|Pause
+
+3, 08:00, 12:00, Kody|Work
 3, 13:30, 17:30, Kody|Work
-4, 07:40, 12:00, Kody|Work
+
+4, 08:00, 12:00, Kody|Work
 4, 13:30, 17:30, Kody|Work
-5, 07:40, 12:00, Kody|Work
+
+5, 08:00, 12:00, Kody|Work
 5, 13:30, 17:30, Kody|Work
 5, 21:00, 22:30, Kody|RB
 ```
