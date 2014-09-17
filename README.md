@@ -65,7 +65,7 @@ The second line is to "Lock" your display name.
 
 
 ### Is it finished?
-No. I need to make the commands working to be saved in the conf file.
+No. I need to do some improvements.
 
 
 ### Why Codebird-PHP?
