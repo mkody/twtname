@@ -58,7 +58,7 @@ echo 'currentDay: "'. $currentDay .'"';
 echo '<br> currentHour: "'. $currentHour .'"';
 echo '<br> name: "'. $name .'"';
 
-/*require_once('./codebird-php/src/codebird.php'); // You will need [codebird.php](https://github.com/jublonet/codebird-php/tree/develop/src)
+require_once('./codebird-php/src/codebird.php'); // You will need [codebird.php](https://github.com/jublonet/codebird-php/tree/develop/src)
 \Codebird\Codebird::setConsumerKey($config['3'], $config['4']);
 $cb = \Codebird\Codebird::getInstance();
 $cb->setToken($config['5'], $config['6']);
@@ -72,4 +72,4 @@ try {
     echo('<br> **Error**: "' . $e->getMessage() . '"<br> **Data sent**: ');
     print_r($params);
     die('<br> --- Stopping. ---');
-}*/
+}
