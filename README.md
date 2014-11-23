@@ -23,7 +23,7 @@ You will need to have...
 - Copy `twtname.exemple.conf` to `twtname.conf`
 - Now, put a crontab job on this script! For exemple with my server, here's my cron to make it work every 10 minutes: `*/10 * * * * cd /home/mkody/twtname && /usr/bin/env php twtname.php > /dev/null 2>&1`
     + Note that with the ` > /dev/null 2>&1` at the end, you'll not keep logs or emails (Except if you want to test or be flooded every 10 minutes).
-- And I think that's it! Now, let's configure it...
+- And I think that's it! Oh wait, now let's configure it...
 
 
 ### How do I get this working now?
@@ -103,6 +103,9 @@ TokenSecret: [HIDDEN]
 5, 08:00, 12:00, Kody|Work
 5, 13:30, 17:30, Kody|Work
 5, 21:00, 22:30, Kody|RB
+
+6, 00:00, 23:59, K͞oͦd͘y͂
+7, 00:00, 23:59, K͞oͦd͘y͂
 ```
 
 ---
