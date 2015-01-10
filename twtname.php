@@ -15,12 +15,23 @@ foreach($config as &$value){
     $value = substr($value, strpos($value, ':') + 2);
 }
 
-if(!empty($_GET['s'])) { // `http://url?s=Value` can change the name and lock to it. Send "reset", "disable" or "enable" to do what it means.
+if (defined('STDIN')) {
+    if(!empty($argv[1])) $get = $argv[1];
+} else {
     $get = $_GET['s'];
+}
+
+if(!empty($get)) { // `http://url?s=Value` can change the name and lock to it. Send "reset", "disable" or "enable" to do what it means.
     if($get == 'reset') {
-        $name = $config['2'];
         // Set "lock" to `0`
         $fileC['1'] = 'Lock: 0';
+
+        foreach($lines as $line) { // Note: last lines can overwrite the $name value if set before
+            $data = explode(", ", $line); // each config values is sperated by a coma and a space
+            if($currentDay == $data['0'] AND $currentHour >= $data['1'] AND $currentHour < $data['2']) {
+                $name = $data['3'];
+            }
+        }
     } elseif($get == 'disable') {
         // Set "Disable" to `1`
         $fileC['0'] = '1';
@@ -39,7 +50,7 @@ if(!empty($_GET['s'])) { // `http://url?s=Value` can change the name and lock to
     $name = $config['1'];
 } else {
     foreach($lines as $line) { // Note: last lines can overwrite the $name value if set before
-        $data = explode(", ", $line); // each config values is sperated by a coma and a space 
+        $data = explode(", ", $line); // each config values is sperated by a coma and a space
         if($currentDay == $data['0'] AND $currentHour >= $data['1'] AND $currentHour < $data['2']) {
             $name = $data['3'];
         }

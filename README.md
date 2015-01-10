@@ -47,7 +47,7 @@ For: Day of the week (N), Start time, End time, Display Name
 
 - If you want, you can also access this script from your browser to control it! But please, PLEASE, add a password to access it before with an .htaccess or something. You can move everything (yes everything, the ".files" too) on a web accessible folder with a server that supports PHP. 
 
-- You can send "commands" to it! Just use the URL to the file and add `?s=` then your command:
+- You can send "commands" to it! Just use: **1)** the URL to the file, add `?s=` and your command OR **2)** on your command line `php twtname.php` and then your command:
     - `reset` will unlock the `Lock` option in the config file
     - `disable` will disable the script
     - `enable` enable the script again
@@ -102,9 +102,10 @@ TokenSecret: [HIDDEN]
 
 5, 08:00, 12:00, Kody|Work
 5, 13:30, 17:30, Kody|Work
-5, 21:00, 22:30, Kody|RB
 
 6, 00:00, 23:59, K͞oͦd͘y͂
+6, 21:00, 22:30, Kody|RB
+
 7, 00:00, 23:59, K͞oͦd͘y͂
 ```
 
