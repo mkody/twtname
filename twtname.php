@@ -5,7 +5,7 @@ $currentDay = date("N");
 $currentHour = date("H:i");
 
 // Our file
-$file = './twtname.conf'; // Read the README for how to use it!
+$file = __DIR__ .'/twtname.conf'; // Read the README for how to use it!
 $fileC = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES); // Read the file and put each lines in an array
 
 $config = array_slice($fileC, 0, 8);
