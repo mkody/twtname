@@ -69,7 +69,7 @@ $message = "[currentDay] '". $currentDay ."', ";
 $message .= "[currentHour] '". $currentHour ."', ";
 $message .= "[name] '". $name ."'";
 
-require_once('./codebird-php/src/codebird.php'); // You will need [codebird.php](https://github.com/jublonet/codebird-php/tree/develop/src)
+require_once(__DIR__ .'/codebird-php/src/codebird.php'); // You will need [codebird.php](https://github.com/jublonet/codebird-php/tree/develop/src)
 \Codebird\Codebird::setConsumerKey($config['4'], $config['5']);
 $cb = \Codebird\Codebird::getInstance();
 $cb->setToken($config['6'], $config['7']);
